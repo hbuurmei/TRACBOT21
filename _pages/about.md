@@ -50,4 +50,17 @@ We prioritize functionality over aesthetics and aimed for achieving the MVP in t
 
 <h2 id="challenge">Challenge</h2>
 
+The challenge for this year's competition was to autonomously place a number of balls in a bin, while completing a number of tasks along the way.
+Refering to the outline of the field below, the robot is placed in a random orientation, in either *start zone A* or *start zone B*.
+Subsequently, the robot is required to hit the *contact zone*, and an additional point is awarded to the team that hits this milestone first.
+To meet the requirements, the robot then has to place at least one ball in the *shooting goal* and do a celebration.
+This can either be done through dumping or shooting the ball(s).
+Of course, the more balls are placed in the basket, the more points the team is awarded, and after the minimum requirements are met, more balls can be loaded in the starting zone.
+Finally, for bonus points, the robot can traverse the *climbing ramp*.
+All of this shall be done within 2 minutes and 10 seconds.
 
+<div class="row justify-content-sm-center">
+  <div class="col-sm">
+    {% include figure.liquid path="assets/img/course_challenge.png" title="Course" class="img-fluid" %}
+  </div>
+</div>
