@@ -18,7 +18,7 @@ The total cost is **$142.37**, which is well below the allocated $200 budget.
 <table
   data-click-to-select="true"
   data-height="600"
-  data-pagination="true"
+  data-pagination="false"
   data-search="true"
   data-toggle="table"
   data-url="{{ '/assets/json/BOM.json' | relative_url }}">
