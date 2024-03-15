@@ -17,7 +17,7 @@ The total cost is **$142.37**, which is well below the allocated $200 budget.
 
 <table
   data-click-to-select="true"
-  data-height="460"
+  data-height="600"
   data-pagination="true"
   data-search="true"
   data-toggle="table"
@@ -27,7 +27,7 @@ The total cost is **$142.37**, which is well below the allocated $200 budget.
       <th data-checkbox="true"></th>
       <th data-field="id" data-halign="left" data-align="left" data-sortable="true">ID</th>
       <th data-field="description" data-halign="left" data-align="left" data-sortable="true">Description</th>
-      <th data-field="part" data-halign="left" data-align="left" data-sortable="true">Part</th>
+      <th data-field="part" data-halign="left" data-align="left" data-sortable="true">Part Number</th>
       <th data-field="quantity" data-halign="left" data-align="left" data-sortable="true">Quantity</th>
       <th data-field="unit cost" data-halign="left" data-align="left" data-sortable="true">Unit Cost</th>
       <th data-field="cost" data-halign="left" data-align="left" data-sortable="true">Cost</th>
