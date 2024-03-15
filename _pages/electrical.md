@@ -49,7 +49,15 @@ The drive train electronics were run off the L289N motor driver with a 12V power
 Both motors were driven by a PWM signal to the enable pins for speed control. The pins used were specifically chosen to be on the same hardware timer (ITimer2) to improve consistency between the motor behavior.
 
 ### Swivel & Deposit Servos
+The robot uses two servo motors: 
+- A DS3218MG high-torque servo to move the ball-deposit swivel, which is also used to orient the IR beacon. 
+- A micro servo to release balls from the swivel tube. 
 
+In an early design, both servos were driven using PWM signals generated from the Arudino. However this system proved to be unreliable, likely due to the use of the Arduino hardware timers for other tasks. The servos would jitter and fail to maintain a consistent position. 
+
+Instead, we elected to use a PCA9685 I2C servo driver breakout board provided by a member of our team. This driver allows up to 16 servos to be controlled independently, with an onboard clock providing the timing signal for PWM frequency and duty cycle. The PWM duty cycle, which determines servo position, is set by I2C message and is maintained until a subsequent message is received. 
+
+Both servos are powered by a dedicated 5V regulator. 
 
 ### Beacon Sensing
 The beacon sensing subsystem is based on an LTR-3208E phototransistor sourced from our lab kit mounted on the robot swivel. The overall purpose of this circuit is to provide an analog voltage level corresponding to the strength of the 3333 Hz beacon signal received by the phototransistor: this allows the robot to measure the direction of maximum received signal and thereby orient itself relative to the IR beacon. 
