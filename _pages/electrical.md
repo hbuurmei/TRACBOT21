@@ -47,6 +47,12 @@ The drive train electronics were run off the L289N motor driver with a 12V power
 </div>
 
 Both motors were driven by a PWM signal to the enable pins for speed control. The pins used were specifically chosen to be on the same hardware timer (ITimer2) to improve consistency between the motor behavior.
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/power_distribution_drive_train.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
+
 
 ### Swivel & Deposit Servos
 The robot uses two servo motors: 
@@ -77,6 +83,19 @@ A [Python program](https://github.com/rcollins130/TRACBOT-models) was written to
 A video demonstrating use of the beacon sensor for initial orientation is provided in the Results section. 
 
 ### Line Sensing
+The line sensing circuit utilizes three RPR220 IR reflective sensors. Reflective sensors contain both an IR LED and a reciever to measure the reflectance of a surface. If there is black tape, the sensor reads a low value which can be used to detect that the robot is above a line.
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/line_sensor_electronics.png" title="Line Sensor Circuit Diagram" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+Three sensors were used primarily for robustness in the sensing capabilities of the robot. The resistors were tuned to provide a large voltage range in the measurements, and each sensor was connected to an Uno analog pin. This allows for the software to make a determination on if a line has been detected.
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/line_sensing_circuit.jpg" title="Line Sensor Electronics" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
 
 ### Inertial Measurement Unit
 The IMU selected was the MPU6050. This IMU is powered off of a 3V3 supply from the Uno and communicates with the Uno via the I2C communication protocal. This unit hosts three acceleratometers and gyroscopes to measure accelerations and angular velocities respectively. However, the only sensor that was actively used in the software was the +Z gyro, which allowed us to measure the robot's rotation rate.
