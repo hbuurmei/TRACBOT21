@@ -36,6 +36,8 @@ toc: [
     ]
 ---
 
+Welcome to the project website of TRACBOT21 for the Stanford ME210 Robot Challenge, we are glad you made it here!
+
 <h2 id="team">Team</h2>
 
 We are a team of Stanford students with a diverse set of backgrounds, dedicated to designing and building a fully functioning robot in a few weeks.
