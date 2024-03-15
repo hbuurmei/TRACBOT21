@@ -4,7 +4,7 @@ permalink: /software/
 title: Software
 nav: false
 nav_order: 2
-giscus_comments: true
+giscus_comments: false
 ---
 
 For this project, we made us of the [PlatformIO](https://platformio.org/) ecosystem to develop the software for the robot.
