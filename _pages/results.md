@@ -30,17 +30,17 @@ The robot is built with a combination of 3D printed parts and off-the-shelf comp
 
 ### Sensing Demonstation
 
-<div class="row mt-3">
+<div class="row mt-3 ">
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/video/beacon_sensing.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
     </div>
+</div>
+<!-- <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/video/line_following.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
-</div>
-<div class="caption">
-    A simple, elegant caption looks good between video rows, after each row, or doesn't have to be there at all.
-</div>
+</div> -->
+
 
 
 ### Competition Day
