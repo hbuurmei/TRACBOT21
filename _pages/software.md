@@ -20,13 +20,15 @@ Our GitHub repository can be found [here](https://github.com/hbuurmei/TRACBOT21-
   </div>
 </div>
 
-### Libraries
-#### TimerInterrupt
+### Libraries/Custom Classes
+---
+
+#### **TimerInterrupt**
 The [TimerInterrupt](https://github.com/khoih-prog/TimerInterrupt) library is an open-source repository that allows users to directly interface with the hardware timers available on their Arduino board. This was especially relevant for us as it allowed us to repurpose a hardware timer for integrating IMU measurements, allowing for angle tracking in our software. Having a dedicated hardware timer proved to be far more precise than using ``millis()`` for the same purpose.
 
 A key learning experience from our project is that one must be extremely conscious of the timers being used by not only the user, but the Arduino itself. The PWM pins on the board use these timers, and one must be careful that you are not accidentially using the timer for two purposes. For example, we chose to perform IMU integration on ITimer1, but the standard Servo library on the Uno controls the Servos via pins 9 and 10, whos PWM also runs off of ITimer1. This led to integration issues and ultimatelly necessitated a last-minue wiring change to offload the Servos to an external breakout board. Another example is that initially we had the one motors enable pin connected to an ITimer0 pin, while the other was on ITimer2. When diagnositng issues driving in a straight line, we eventually moved both motors onto ITimer2, which improved consistency and straight line performance.
 
-#### IMU Processing
+#### **IMU Processing**
 The IMU processing class was developed in-house and inherits the open-source [mpu6050](https://github.com/ElectronicCats/mpu6050) library and acts as a wrapper to improve ease of use. This library contains two key functions that expand upon the capabilities of the mpu6050 library:
 - ``calibrate()`` reads IMU data for an user specified amount the time. The arithmetic mean of this data is stored as the bias for each sensor. This bias is then used to correct the IMU raw measurements to greatly improve accuracy.
 - ``update_integrator()`` is called at a fixed interval by ITimer1 to provide estimates of angles and position/velocity. It works by collecting the current bias-compensated measurements and integrating those measurements via a forward Euler approximation. 
@@ -35,14 +37,14 @@ $$\theta_{z,n+1} = \theta_{z,n}+(\omega_{z,raw}-\omega_{z,bias})\Delta t$$
 
 This function along with the ability to ``reset_integrators()`` is key in measuring our turns to a high degree of precision, necessary for many events in our state diagram.
 
-#### Beacon Processing
+#### **Beacon Processing**
 
-#### Line Sensor Processing
+#### **Line Sensor Processing**
 The line sensor processing was relatively straight forward in our software. We used hysterisis in order to remove chattering around a single threshold, and the min and max thresholds were turned experimentially such that we could detect line crossings. The software also kept running counters of the number of transitions between ``on_line`` and ``off_line`` states which was useful for debugging. The reliability of our sensor meant that this simple software implentation was very reliable, and it did not cause many issues during the project.
 
-#### Servo Commanding
+#### **Servo Commanding**
 
-#### Motor Commanding
+#### **Motor Commanding**
 The motor control library was developed in-house and provides a range of commanding capabilities for the motor driver. This simplified actions in our state diagram and provided developers with flexibility in how the robot could be maneuvered. Given the size of our robot, this maneuverability was critical to mission success.
 
 One key aspect of the commanding capabilities was three different turn modes, described below:
@@ -51,5 +53,3 @@ One key aspect of the commanding capabilities was three different turn modes, de
 - ``MIDDDLE`` has the wheels drive in opposite directions, minimizing the shift in center of mass.
   
 We found that while the ``MIDDLE`` turns were slightly less accurate due to a higher minimum turning speed, the value of keeping the center of mass in the same place was especially important to tuning the parameters in our software. Therefore, most turns were executed using the ``MIDDLE`` specification.
-
-
