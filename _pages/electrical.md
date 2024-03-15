@@ -29,10 +29,22 @@ Our robot was powered by two 7V2 battery packs attached in a series configuratio
 - One 12V regulator to the Arduino Uno 
 - One 5V regulator to the Servos
 
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/power_distribution.jpg" title="Power Distribution Electronics" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+
 The 12V regulator used was the L7812, and the 5V regulator was the M1084. All were attached to the 14V4 supply; however, a potential improvement here to reduce wasted energy would be to supply the 5V regulator with a single 7V2 battery to reduce the voltage drop.
 
 ### Drive Train
 The drive train electronics were run off the L289N motor driver with a 12V power supply. Logic supply was taken from the Uno at 5V. Two 12V Greartisan DC Motors were selected for the drive train, and a the 100RPM configuration was chosen as this provided a good balance between maximum speed and speed range. Initially we selected the 200RPM configuration, but ultimately found that the minimum loaded speed was too high to enable precise turning. Luckily, this vendor has many different options with the same motor geometry, making it easy to iterate without redesigning the motor mount assembly.
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/L298.jpg" title="L298N Motor Driver" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
 
 Both motors were driven by a PWM signal to the enable pins for speed control. The pins used were specifically chosen to be on the same hardware timer (ITimer2) to improve consistency between the motor behavior.
 
@@ -43,4 +55,12 @@ Both motors were driven by a PWM signal to the enable pins for speed control. Th
 ### Line Sensing
 
 ### Inertial Measurement Unit
+The IMU selected was the MPU6050. This IMU is powered off of a 3V3 supply from the Uno and communicates with the Uno via the I2C communication protocal. This unit hosts three acceleratometers and gyroscopes to measure accelerations and angular velocities respectively. However, the only sensor that was actively used in the software was the +Z gyro, which allowed us to measure the robot's rotation rate.
 
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/imu.jpg" title="MPU6050 Inertial Measurement Unit" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+
+The IMU was provided with its own hardware timer (ITimer1) to ensure that its measurements could be processed and integrated with the highest available precision. More information on how the IMU measurements were used in the software it provided in the software section.
