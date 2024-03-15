@@ -4,6 +4,7 @@ permalink: /software/
 title: Software
 nav: false
 nav_order: 2
+giscus_comments: true
 ---
 
 For this project, we made us of the [PlatformIO](https://platformio.org/) ecosystem to develop the software for the robot.
@@ -17,6 +18,7 @@ Our GitHub repository can be found [here](https://github.com/hbuurmei/TRACBOT21-
 
 ### Libraries
 ---
+
 
 
 [comment on limited timers as well]
