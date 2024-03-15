@@ -7,15 +7,29 @@ nav: false
 nav_order: 3
 ---
 
-
-
+The overall design of the TRACBOT21 is shown in the render below.
+Next, we will go into the each of the components of the robot in detail.
 
 <div class="row justify-content-sm-center">
-  <div class="col-sm">
+  <div class="col-md-4 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/render_tracbot.png" title="TRACBOT21 Render" class="img-fluid" %}
   </div>
 </div>
 
+### Drive Train
+---
+The drive train is arguably the most important part of the robot, as the competition requires mobility and sensors depend on a working a drive train.
+The drive train is composed of two DC motors, two wheels, and a caster wheel.
+
+### Chassis
+---
+
+something
+
+### Dumping Mechanism
+---
+
+something
 
 ### Interactive 3D Model
 ---

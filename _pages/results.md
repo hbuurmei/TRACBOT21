@@ -10,6 +10,7 @@ nav_order: 5
 After a few weeks of hard work, the robot is fully integrated and operational.
 
 ### Robot Assembly
+---
 We show our fully assembled robot in the images below.
 The robot is built with a combination of 3D printed parts and off-the-shelf components.
 
@@ -29,6 +30,7 @@ The robot is built with a combination of 3D printed parts and off-the-shelf comp
 </div>
 
 ### Sensing Demonstation
+---
 Sensing was one of the key components of this project, and posed significant challenges.
 In particular, it was nontrivial to get an initial estimate of our (random) starting orientation.
 We show a video of the robot sensing the beacon and adjusting its orientation accordingly.
@@ -49,6 +51,7 @@ Note that at this stage the robot was yet to be equipped with the shooting mecha
 </div>
 
 ### Competition Day
+---
 We succesfully competed with other teams on competition day.
 Although we did not make it to the finals, we are proud of our performance and the robot we built.
 Below is a picture of the setup, with our robot on the left starting zone, about to start the first round of the competition.
