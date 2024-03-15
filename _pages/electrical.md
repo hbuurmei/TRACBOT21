@@ -89,13 +89,15 @@ The line sensing circuit utilizes three RPR220 IR reflective sensors. Reflective
     {% include figure.liquid path="assets/img/line_sensor_electronics.png" title="Line Sensor Circuit Diagram" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-Three sensors were used primarily for robustness in the sensing capabilities of the robot. The resistors were tuned to provide a large voltage range in the measurements, and each sensor was connected to an Uno analog pin. This allows for the software to make a determination on if a line has been detected.
+Three sensors were used primarily for robustness in the sensing capabilities of the robot. As documentation for the RPR220 was quite limited, the resistors were tuned experimentially to provide a large voltage range in the measurements. Each sensor was connected to an Uno analog pin. This allows for the software to make a determination on if a line has been detected.
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/line_sensing_circuit.jpg" title="Line Sensor Electronics" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
+The casing surrounding the RPR220 made our line sensing quite robust and reliable in the presence of ever-changing external conditions. This is because nearly all noise sources were blocked, and we are able to consistently pick up the reflected signal off the ground.
 
 ### Inertial Measurement Unit
 The IMU selected was the MPU6050. This IMU is powered off of a 3V3 supply from the Uno and communicates with the Uno via the I2C communication protocal. This unit hosts three acceleratometers and gyroscopes to measure accelerations and angular velocities respectively. However, the only sensor that was actively used in the software was the +Z gyro, which allowed us to measure the robot's rotation rate.
