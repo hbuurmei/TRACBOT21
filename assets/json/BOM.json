@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-    "description": "Arduino Uno",
-    "part": "",
+    "description": "Arduino Uno Rev3",
+    "part": "A000066",
     "quantity": 1,
     "unit cost": "$24.95",
     "cost": "$24.95"
@@ -18,7 +18,7 @@
   {
     "id": 2,
     "description": "12V DC Motor (100RPM)",
-    "part": "",
+    "part": "B072R57C56",
     "quantity": 2,
     "unit cost": "$16.40",
     "cost": "$32.80"
@@ -33,23 +33,23 @@
   },
   {
     "id": 4,
-    "description": "Drain Pipe (2 In. x 10 Ft.)",
-    "part": "",
+    "description": "Drain Pipe (2 in. D x 10 in. L)",
+    "part": "PVC071120600",
     "quantity": 1,
     "unit cost": "$7.23",
     "cost": "$7.23"
   },
   {
     "id": 5,
-    "description": "Acrylic Sheet 0.25 In.",
+    "description": "Acrylic Sheet (0.25 in. T x 12 in. W x 12 in. L)",
     "part": "",
-    "quantity": 1,
+    "quantity": 3,
     "unit cost": "$5.00",
-    "cost": "$5.00"
+    "cost": "$15.00"
   },
   {
     "id": 6,
-    "description": "Skate Wheels (84x24mm)",
+    "description": "Skate Wheels (84 mm D x 24 mm W)",
     "part": "3275",
     "quantity": 2,
     "unit cost": "$5.00",
@@ -58,30 +58,30 @@
   {
     "id": 7,
     "description": "Ball Caster",
-    "part": "",
+    "part": "15100003",
     "quantity": 1,
     "unit cost": "$1.75",
     "cost": "$1.75"
   },
   {
     "id": 8,
-    "description": "Wheel Adapter Kit (1/4 In.)",
-    "part": "",
+    "description": "Wheel Adapter Kit (1/4 in. D)",
+    "part": "2675",
     "quantity": 1,
     "unit cost": "$4.00",
     "cost": "$8.00"
   },
   {
     "id": 9,
-    "description": "Steel Threaded Rod (1/4 In. x 20 In. x 12 In.)",
-    "part": "",
+    "description": "Steel Threaded Rod (1/4 in. D x 12 in. L)",
+    "part": "3313N127",
     "quantity": 4,
     "unit cost": "$6.00",
     "cost": "$24.00"
   },
   {
     "id": 10,
-    "description": "Servo Motor",
+    "description": "5V Servo Motor (5.5 kg-cm)",
     "part": "HS-311",
     "quantity": 1,
     "unit cost": "$12.00",
@@ -92,36 +92,36 @@
     "description": "Motor Driver",
     "part": "LN298N",
     "quantity": 1,
-    "unit cost": "$",
-    "cost": "$"
+    "unit cost": "$2.50",
+    "cost": "$2.50"
   },
   {
     "id": 12,
     "description": "Switch",
     "part": "",
     "quantity": 1,
-    "unit cost": "$",
-    "cost": "$"
+    "unit cost": "$1.00",
+    "cost": "$1.00"
   },
   {
     "id": 13,
-    "description": "Servo Motor",
-    "part": "",
+    "description": "Small Servo Motor (1.6 kg-cm)",
+    "part": "DF9GMS",
     "quantity": 1,
-    "unit cost": "$",
-    "cost": "$"
+    "unit cost": "$3.90",
+    "cost": "$3.90"
   },
   {
     "id": 14,
-    "description": "Voltage Regulator",
-    "part": "DF9GMS",
-    "quantity": 1,
-    "unit cost": "$",
-    "cost": "$"
+    "description": "12V Voltage Regulator",
+    "part": "L7812CV",
+    "quantity": 3,
+    "unit cost": "$0.60",
+    "cost": "$1.80"
   },
   {
     "id": 15,
-    "description": "Screw (4-40, 1/2 In.)",
+    "description": "Screw (4-40, 1/2 in.)",
     "part": "",
     "quantity": 16,
     "unit cost": "$0.02",
@@ -137,7 +137,7 @@
   },
   {
     "id": 17,
-    "description": "Screw (6-32, 1 In.)",
+    "description": "Screw (6-32, 1 in.)",
     "part": "",
     "quantity": 12,
     "unit cost": "$0.04",
@@ -153,10 +153,18 @@
   },
   {
     "id": 19,
-    "description": "Screw (M3 x 10mm)",
+    "description": "Screw (M3 x 10 mm)",
     "part": "",
     "quantity": 12,
     "unit cost": "$0.05",
     "cost": "$0.60"
+  },
+  {
+    "id": 20,
+    "description": "5V Voltage Regulator",
+    "part": "L7805CV",
+    "quantity": 1,
+    "unit cost": "$1.05",
+    "cost": "$1.05"
   }
 ]

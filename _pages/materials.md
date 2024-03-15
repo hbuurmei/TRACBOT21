@@ -15,9 +15,10 @@ More details on the materials used can be found below.
 ### Bill of Material (BOM)
 ---
 
-The bill of material (BOM)<d-footnote>Note that only components that had to be bought are included, not the 3D printed parts.</d-footnote> is a list of all the parts and materials that are required to build the robot and is provided below.
+The bill of material (BOM)<d-footnote>Note that only components that had to be acquired are included, not the 3D printed parts.</d-footnote> is a list of all the parts and materials that are required to build the robot and is provided below.
 
-The total cost is **$142.37**, which is well below the allocated $200 budget.
+In the BOM, also the cost for each part, the quantity, and the total cost are provided.
+The robot can be built for a total cost of **$167.08**, excluding filament for the 3D printer, which is well below the allocated $200 budget.
 
 <table
   data-click-to-select="true"
