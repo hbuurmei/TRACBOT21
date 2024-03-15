@@ -14,7 +14,11 @@ Our GitHub repository can be found [here](https://github.com/hbuurmei/TRACBOT21-
 ### State Diagram
 --- 
 
-[insert state diagram]
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/state_diagram.drawio.png" class="img-fluid rounded z-depth-0" zoomable=false %}
+  </div>
+</div>
 
 ### Libraries
 #### TimerInterrupt
@@ -27,11 +31,11 @@ The IMU processing class was developed in-house and inherits the open-source [mp
 - ``calibrate()`` reads IMU data for an user specified amount the time. The arithmetic mean of this data is stored as the bias for each sensor. This bias is then used to correct the IMU raw measurements to greatly improve accuracy.
 - ``update_integrator()`` is called at a fixed interval by ITimer1 to provide estimates of angles and position/velocity. It works by collecting the current bias-compensated measurements and integrating those measurements via a forward Euler approximation. 
 
-$$\theta_{z,n+1} = \theta_{z,raw}+(\omega_{z,n}-\omega_{z,bias})\Delta t$$
+$$\theta_{z,n+1} = \theta_{z,n}+(\omega_{z,raw}-\omega_{z,bias})\Delta t$$
 
 This function along with the ability to ``reset_integrators()`` is key in measuring our turns to a high degree of precision, necessary for many events in our state diagram.
 
-### Beacon Processing
+#### Beacon Processing
 
 #### Line Sensor Processing
 The line sensor processing was relatively straight forward in our software. We used hysterisis in order to remove chattering around a single threshold, and the min and max thresholds were turned experimentially such that we could detect line crossings. The software also kept running counters of the number of transitions between ``on_line`` and ``off_line`` states which was useful for debugging. The reliability of our sensor meant that this simple software implentation was very reliable, and it did not cause many issues during the project.

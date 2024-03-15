@@ -64,6 +64,11 @@ In an early design, both servos were driven using PWM signals generated from the
 Instead, we elected to use a PCA9685 I2C servo driver breakout board provided by a member of our team. This driver allows up to 16 servos to be controlled independently, with an onboard clock providing the timing signal for PWM frequency and duty cycle. The PWM duty cycle, which determines servo position, is set by I2C message and is maintained until a subsequent message is received. 
 
 Both servos are powered by a dedicated 5V regulator. 
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/i2c_components_electrical.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
 
 ### Beacon Sensing
 The beacon sensing subsystem is based on an LTR-3208E phototransistor sourced from our lab kit mounted on the robot swivel. The overall purpose of this circuit is to provide an analog voltage level corresponding to the strength of the 3333 Hz beacon signal received by the phototransistor: this allows the robot to measure the direction of maximum received signal and thereby orient itself relative to the IR beacon. 
@@ -77,6 +82,12 @@ The basic sections of the circuit are:
 - A mechanical switch allowing selection between the output of the first amplifier and the output of the second amplifier. 
 - A final low pass filter to reduce high frequency interference. 
 - A peak detection circuit, with reset, to provide a smooth analog output voltage to the Arduino. 
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ir_sensors_electrical" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
 
 A [Python program](https://github.com/rcollins130/TRACBOT-models) was written to aid in calculation of the required amplification gains, cutoff frequencies, and component values in each stage of the circuit. The [eseries library](https://pypi.org/project/eseries/) was extremely helpful for determining the best combination of resistor and capacitor values to meet gain and frequency specifications.
 
