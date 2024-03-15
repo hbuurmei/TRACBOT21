@@ -29,19 +29,24 @@ The robot is built with a combination of 3D printed parts and off-the-shelf comp
 </div>
 
 ### Sensing Demonstation
+Sensing was one of the key components of this project, and posed significant challenges.
+In particular, it was nontrivial to get an initial estimate of our (random) starting orientation.
+We show a video of the robot sensing the beacon and adjusting its orientation accordingly.
 
-<div class="row mt-3 ">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row mt-3 justify-content-sm-center">
+    <div class="col-md-6 mt-3 mt-md-0">
         {% include video.liquid path="assets/video/beacon_sensing.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
     </div>
 </div>
-<!-- <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+
+Moreover, we show a video of the robot tracking a line and navigating itself to the contact zone and shooting goal, respectively.
+Note that at this stage the robot was yet to be equipped with the shooting mechanism.
+
+<div class="row mt-3 justify-content-sm-center">
+    <div class="col-md-3 mt-3 mt-md-0">
         {% include video.liquid path="assets/video/line_following.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
-</div> -->
-
-
+</div>
 
 ### Competition Day
 We succesfully competed with other teams on competition day.
