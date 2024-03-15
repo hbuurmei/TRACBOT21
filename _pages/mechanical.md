@@ -7,6 +7,18 @@ nav: false
 nav_order: 3
 ---
 
+
+
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm">
+    {% include figure.liquid path="assets/img/render_tracbot.png" title="TRACBOT21 Render" class="img-fluid" %}
+  </div>
+</div>
+
+
+### Interactive 3D Model
+---
 Our design is shown below in a 3D interactive fashion.
 
 <!-- Interactive 3D Model -->
