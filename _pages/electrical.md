@@ -50,7 +50,23 @@ Both motors were driven by a PWM signal to the enable pins for speed control. Th
 
 ### Swivel & Deposit Servos
 
+
 ### Beacon Sensing
+The beacon sensing subsystem is based on an LTR-3208E phototransistor sourced from our lab kit mounted on the robot swivel. The overall purpose of this circuit is to provide an analog voltage level corresponding to the strength of the 3333 Hz beacon signal received by the phototransistor: this allows the robot to measure the direction of maximum received signal and thereby orient itself relative to the IR beacon. 
+
+Our original intention was to use the beacon both for determining initial orientation and for guidance as the robot moves between the contact zone, shooting zone, and ramp. This requires a circuit with extremely high dynamic range as the intensity of the beacon signal decreases with the *square* of the distance from the beacon. To address this, we designed a two-stage amplification circuit and intended to use an analog multiplexer to select between the output of the first amplifier, which provided moderate gain suitable for use close to the beacon, and second amplifier, which further amplified the signal for use in the starting zone. However as the project progressed we elected to drop the requirement for beacon sensing close to the beacon and replaced the analog multiplexer with a mechanical switch: This allowed us to continue to use the moderate-gain setting for testing, and the high-gain setting for initial orientation. 
+
+The basic sections of the circuit are:
+- A transresistive amplifier with offset voltage to convert the phototransistor current signal into a voltage signal. 
+- A DC-blocking filter with offset voltage.
+- Two noninverting amplifier circuits, each with a DC-blocking high pass filter on the output.
+- A mechanical switch allowing selection between the output of the first amplifier and the output of the second amplifier. 
+- A final low pass filter to reduce high frequency interference. 
+- A peak detection circuit, with reset, to provide a smooth analog output voltage to the Arduino. 
+
+A [Python program](https://github.com/rcollins130/TRACBOT-models) was written to aid in calculation of the required amplification gains, cutoff frequencies, and component values in each stage of the circuit. The [eseries library](https://pypi.org/project/eseries/) was extremely helpful for determining the best combination of resistor and capacitor values to meet gain and frequency specifications.
+
+A video demonstrating use of the beacon sensor for initial orientation is provided in the Results section. 
 
 ### Line Sensing
 
