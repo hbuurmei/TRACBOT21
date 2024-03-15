@@ -1,0 +1,10 @@
+[
+  {
+    "id": 0,
+    "description": "IMU",
+    "part": "BMI270",
+    "quantity": 1,
+    "unit cost": "$15.82",
+    "cost": "$15.82"
+  }
+]

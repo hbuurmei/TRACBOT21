@@ -19,3 +19,4 @@ Our GitHub repository can be found [here](https://github.com/hbuurmei/TRACBOT21-
 ---
 
 
+[comment on limited timers as well]
