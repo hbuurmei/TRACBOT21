@@ -13,12 +13,13 @@ Our GitHub repository can be found [here](https://github.com/hbuurmei/TRACBOT21-
 
 ### State Diagram
 --- 
-
+Due to the sequential nature of the tasks assigned for our robot, our state diagram is also highly linear in nature. States exist in order to complete each task one after the other. The graphic of our state diagram provided below is a substantial simplifcation over the true stateflow logic in our software, but is rather meant to provide a general understanding of the logical flow we intend to achieve. The key difference that is not represented here is that our software includes a second state diagram that handles pauses and the details of drive train commanding.
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/state_diagram.drawio.png" class="img-fluid rounded z-depth-0" zoomable=false %}
+    {% include figure.liquid loading="eager" path="assets/img/state_diagram4.png" class="img-fluid rounded z-depth-0" zoomable=false %}
   </div>
 </div>
+Execution of state logic is done in the Arduino ``loop()`` function. Rather than having a difficult-to-maintain switch case in our loop, we rather use a function pointer as our state parameter in the form ``void (*state) (void)``. This allows us to just call ``state()`` in the loop and change the function pointer to transition between states. 
 
 ### Libraries/Custom Classes
 ---
