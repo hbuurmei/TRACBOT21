@@ -112,4 +112,4 @@ The IMU selected was the MPU6050. This IMU is powered off of a 3V3 supply from t
   </div>
 </div>
 
-The IMU was provided with its own hardware timer (ITimer1) to ensure that its measurements could be processed and integrated with the highest available precision. More information on how the IMU measurements were used in the software it provided in the software section.
+The IMU was provided with its own hardware timer (ITimer1) to ensure that its measurements could be processed and integrated with the highest available precision. More information on how the IMU measurements were used in the software is specified in the Software Design section.
